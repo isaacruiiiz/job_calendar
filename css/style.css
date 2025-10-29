@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    background-color: black;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(5, 5, 5);
+    justify-content: center;
+    display: grid;
+}
+
+.dayContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
