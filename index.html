@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Control Horas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f0f0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Control de Horas">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Control Horas</title>
 </head>
 <body>
-  <header>
+    <header>
     <div id="today">
-      <h1 id="dayName"></h1>
-      <span id="dayDate"></span>
+        <h1 id="dayName"></h1>
+        <span id="dayDate"></span>
     </div>
-  </header>
+    </header>
 
-  <main id="home">
+    <main id="home">
     <div class="days">
-      <div class="day" data-dia="Lunes"><p>Lunes</p><span>--:--h</span></div>
-      <div class="day" data-dia="Martes"><p>Martes</p><span>--:--h</span></div>
-      <div class="day" data-dia="Miércoles"><p>Miércoles</p><span>--:--h</span></div>
-      <div class="day" data-dia="Jueves"><p>Jueves</p><span>--:--h</span></div>
-      <div class="day" data-dia="Viernes"><p>Viernes</p><span>--:--h</span></div>
+        <div class="day" data-dia="Lunes"><p>Lunes</p><span>--:--h</span></div>
+        <div class="day" data-dia="Martes"><p>Martes</p><span>--:--h</span></div>
+        <div class="day" data-dia="Miércoles"><p>Miércoles</p><span>--:--h</span></div>
+        <div class="day" data-dia="Jueves"><p>Jueves</p><span>--:--h</span></div>
+        <div class="day" data-dia="Viernes"><p>Viernes</p><span>--:--h</span></div>
     </div>
 
     <div id="summary">
-      <p>Total:</p>
-      <h2 id="totalHoras">0h</h2>
-      <button id="reset">reset</button>
+        <p>Total:</p>
+        <h2 id="totalHoras">0h</h2>
+        <button id="reset">reset</button>
     </div>
-  </main>
+    </main>
 
-  <section id="formOverlay">
+    <section id="formOverlay">
     <div class="form">
-      <h2 id="formTitle">Hora Selector</h2>
-      <label>Hora Inicio<input type="time" id="inicio" /></label>
-      <label>Descanso (min)<input type="number" id="descanso" min="0" max="120" /></label>
-      <label>Hora Salida<input type="time" id="salida" /></label>
-      <button id="confirm">Confirmar</button>
-      <button id="closeForm">Volver</button>
+        <h2 id="formTitle">Hora Selector</h2>
+        <label>Hora Inicio<input type="time" id="inicio" /></label>
+        <label>Descanso (min)<input type="number" id="descanso" min="0" max="120" /></label>
+        <label>Hora Salida<input type="time" id="salida" /></label>
+        <button id="confirm">Confirmar</button>
+        <button id="closeForm">Volver</button>
     </div>
-  </section>
+    </section>
 
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
