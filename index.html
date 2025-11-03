@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Calendar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Control Horas</title>
 </head>
 <body>
-    <div id="container">
-        <div class="dayContainer">
-            <p class="dayOfTheWeek">Lunes</p>
-            <input type="text" class="dayInput" style="width: 50px; text-align: center;">
-        </div>
-        <div class="dayContainer">
-            <p class="dayOfTheWeek">Martes</p>
-            <input type="text" class="dayInput" style="width: 50px; text-align: center;">
-        </div>
-        <div class="dayContainer">
-            <p class="dayOfTheWeek">Miércoles</p>
-            <input type="text" class="dayInput" style="width: 50px; text-align: center;">
-        </div>
-        <div class="dayContainer">
-            <p class="dayOfTheWeek">Jueves</p>
-            <input type="text" class="dayInput" style="width: 50px; text-align: center;">
-        </div>
-        <div class="dayContainer">
-            <p class="dayOfTheWeek">Viernes</p>
-            <input type="text" class="dayInput" style="width: 50px; text-align: center;">
-        </div>
-
-        <div id="totalHours">
-            <p>Total Hours:</p>
-            <input type="text" id="hoursInput" style="width: 50px; text-align: center;">
-        </div>
+  <header>
+    <div id="today">
+      <h1 id="dayName"></h1>
+      <span id="dayDate"></span>
     </div>
+  </header>
+
+  <main id="home">
+    <div class="days">
+      <div class="day" data-dia="Lunes"><p>Lunes</p><span>--:--h</span></div>
+      <div class="day" data-dia="Martes"><p>Martes</p><span>--:--h</span></div>
+      <div class="day" data-dia="Miércoles"><p>Miércoles</p><span>--:--h</span></div>
+      <div class="day" data-dia="Jueves"><p>Jueves</p><span>--:--h</span></div>
+      <div class="day" data-dia="Viernes"><p>Viernes</p><span>--:--h</span></div>
+    </div>
+
+    <div id="summary">
+      <p>Total:</p>
+      <h2 id="totalHoras">0h</h2>
+      <button id="reset">reset</button>
+    </div>
+  </main>
+
+  <section id="formOverlay">
+    <div class="form">
+      <h2 id="formTitle">Hora Selector</h2>
+      <label>Hora Inicio<input type="time" id="inicio" /></label>
+      <label>Descanso (min)<input type="number" id="descanso" min="0" max="120" /></label>
+      <label>Hora Salida<input type="time" id="salida" /></label>
+      <button id="confirm">Confirmar</button>
+      <button id="closeForm">Volver</button>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
