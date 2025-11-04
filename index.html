@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-    <div id="today">
+    <div id="today" style="display: flex; align-items: flex-end; gap: 10px;">
         <h1 id="dayName"></h1>
         <span id="dayDate"></span>
     </div>
@@ -31,15 +31,16 @@
     </div>
 
     <div id="summary">
-        <p>Total:</p>
-        <h2 id="totalHoras">0h</h2>
+        <div>
+            <p style="margin: 0;color: #A9A9A9;font-size: 16px;">Total:</p>
+            <h2 id="totalHoras">0h</h2>
+        </div>
         <button id="reset">reset</button>
     </div>
     </main>
 
     <section id="formOverlay">
     <div class="form">
-        <h2 id="formTitle">Hora Selector</h2>
         <label>Hora Inicio<input type="time" id="inicio" /></label>
         <label>Descanso (min)<input type="number" id="descanso" min="0" max="120" /></label>
         <label>Hora Salida<input type="time" id="salida" /></label>
