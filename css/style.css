@@ -2,7 +2,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: #0f0f0f;
+  background: #000000;
   color: white;
   margin: 0;
   min-height: 100vh;
@@ -12,39 +12,56 @@ body {
 }
 
 header {
-  text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
+  width: 85%;
+}
+
+#home {
+  width: 85%;
 }
 
 #dayName {
-  font-size: 2.5rem;
+  font-size: 48px;
   margin: 0;
+  line-height: 1;
 }
 
 #dayDate {
-  background: #1a1a1a;
-  color: #cdd4ff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.9rem;
+  background: #8AA8DF;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 65px;
+  height: 25px;
+  font-weight: bold;
+  padding: 0 10px; /* para que se adapte al texto */
+  margin-bottom: 4px; /* opcional, si quieres alinearlo visualmente mejor */
 }
 
 .days {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .day {
-  background: #1a1a1a;
-  border-radius: 14px;
+  background: #040404;
+  border-radius: 30px;
+  border: #121212 1px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 24px;
+  font-weight: bold;
+  color: #A9A9A9;
 }
 
 .day:hover {
@@ -52,43 +69,54 @@ header {
 }
 
 .day span {
-  background: #0f0f0f;
+  background: transparent;
   padding: 8px 12px;
   border-radius: 8px;
-  font-weight: 600;
-  color: #cdd4ff;
+  font-weight: bold;
+  color: white;
+  font-size: 48px;
 }
 
 #summary {
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Alinea h2 y botón abajo */
+  justify-content: space-between; /* Espacio entre los dos elementos */
   gap: 12px;
-  margin-top: 40px;
+  position: fixed;
+  bottom: 30px;
+  width: 85%;
 }
 
 #summary h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 48px;
   color: #8ca9ff;
+  line-height: 1;
 }
 
 #reset {
   background: none;
   border: none;
-  color: gray;
+  color: #A9A9A9;
   cursor: pointer;
+  text-decoration: underline;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
 }
 
 /* FORM OVERLAY */
 #formOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.75);
   display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 100;
+  backdrop-filter: blur(30px);
 }
 
 #formOverlay.active {
@@ -110,10 +138,11 @@ header {
 label {
   display: flex;
   flex-direction: column;
-  font-size: 1.1rem;
+  font-size: 24px;
   gap: 6px;
   color: #ccc;
-}
+  font-weight: bold;
+} 
 
 input[type="time"], input[type="number"] {
   font-size: 1.5rem;
