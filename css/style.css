@@ -130,8 +130,9 @@ header {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 45px;
   text-align: center;
+  align-items: center;
 }
 
 .form h2 {
@@ -149,27 +150,46 @@ label {
 } 
 
 input[type="time"], input[type="number"] {
-  font-size: 1.5rem;
+  font-size: 65px;
   padding: 6px;
   text-align: center;
   border: none;
   border-radius: 8px;
-  background: #1a1a1a;
+  background: transparent;
   color: white;
 }
 
-button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: #5b72ff;
-  color: white;
+#confirm {
+  width: 183px;
+  height: 63px;
+  background-color: rgba(0, 0, 0, 0.66);
+  border: 1px solid #121212;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 50px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: #E6E6E6;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: filter 0.5s ease-in-out;
 }
 
 #closeForm {
-  background: #333;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: #A9A9A9;
 }
 
 
