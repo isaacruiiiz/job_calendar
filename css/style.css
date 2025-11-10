@@ -153,6 +153,8 @@ input[type="time"], input[type="number"] {
   font-size: 65px;
   padding: 6px;
   text-align: center;
+  align-content: center;
+  align-items: center;
   border: none;
   border-radius: 8px;
   background: transparent;
