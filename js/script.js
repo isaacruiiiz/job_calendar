@@ -25,7 +25,7 @@ function showToday() {
   
     const total = Object.values(horas)
       .reduce((acc, h) => acc + (h.totalHoras || 0), 0);
-    document.getElementById("totalHoras").textContent = `${total}h`;
+    document.getElementById("totalHoras").textContent = `${total.toFixed(2)}h`;
   }
   actualizarVista();
   
