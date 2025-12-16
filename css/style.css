@@ -149,18 +149,29 @@ label {
   font-weight: bold;
 } 
 
-input[type="time"], input[type="number"] {
+input[type="time"], 
+input[type="number"] {
   font-size: 65px;
   padding: 6px;
   text-align: center;
-  align-content: center;
-  align-items: center;
+  /* align-content y align-items no afectan a inputs que no son display:flex */
   border: none;
   border-radius: 8px;
   background: transparent;
   color: white;
-  max-width: 100%;
-  margin: 0 20px 0 20px;
+  
+  /* CAMBIOS IMPORTANTES: */
+  width: 100%; /* Ocupar todo el ancho disponible del contenedor padre */
+  max-width: 100%; 
+  margin: 10px 0; /* Reducir márgenes laterales para evitar desbordes */
+  
+  /* Truco para limpiar estilos nativos de móvil */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Asegurar que la fuente se hereda o define correctamente en móvil */
+  font-family: inherit; 
 }
 
 #confirm {
@@ -402,4 +413,12 @@ input[type="time"], input[type="number"] {
     rgba(0, 0, 0, 0) 87.5%,
     rgba(0, 0, 0, 1) 100%
   );
+}
+
+@media (max-width: 480px) {
+  input[type="time"], 
+  input[type="number"] {
+    font-size: 3rem; /* Un tamaño más manejable para móvil (aprox 48px) */
+    padding: 0;      /* Quitar padding extra si es necesario */
+  }
 }
