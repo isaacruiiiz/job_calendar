@@ -446,7 +446,7 @@ input[type="number"] {
 }
 
 @keyframes flashGreen {
-  0% { background-color: #4caf50; }
+  0% { background-color: #8aa8df; }
   100% { background-color: #1e1e1e; }
 }
 .saved-flash {
