@@ -75,10 +75,10 @@ header {
 }
 
 /* Estilo para cuando un día tiene horas guardadas (Feedback visual) */
-.day[data-has-content="true"] {
+/* .day[data-has-content="true"] {
   border: 1px solid #4caf50;
   background: rgba(76, 175, 80, 0.1);
-}
+} */
 
 .day:hover {
   background: #2a2a2a;
@@ -94,8 +94,8 @@ header {
 }
 
 .day.today {
-  border: 2px solid #4caf50;
-  box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+  border: 2px solid #8AA8DF;
+  box-shadow: 0 0 15px rgba(138, 168, 223, 0.3);
 }
 .day.today h3 {
   color: #4caf50;
