@@ -61,10 +61,23 @@ header {
   align-items: center;
   padding: 16px 20px;
   cursor: pointer;
-  transition: 0.2s;
   font-size: 24px;
   font-weight: bold;
   color: #A9A9A9;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+  position: relative;
+  overflow: hidden
+}
+
+/* Efecto Click (Active) */
+.day:active {
+  transform: scale(0.95); /* Se encoge un poco al pulsar */
+}
+
+/* Estilo para cuando un día tiene horas guardadas (Feedback visual) */
+.day[data-has-content="true"] {
+  border: 1px solid #4caf50;
+  background: rgba(76, 175, 80, 0.1);
 }
 
 .day:hover {
@@ -78,6 +91,15 @@ header {
   font-weight: bold;
   color: white;
   font-size: 48px;
+}
+
+.day.today {
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+}
+.day.today h3 {
+  color: #4caf50;
+  font-weight: bold;
 }
 
 #summary {
